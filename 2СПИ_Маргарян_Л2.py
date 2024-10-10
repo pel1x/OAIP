@@ -27,31 +27,33 @@ def main():
     b = input("Введите слово:")
     c = input("Введите слово:")
 
-    if a == "раз" and b == "два" and c == "три":
-        print("ГОРИ")
-    elif a == "1" and b == "2" and c == "3":
+    if a == "раз" and b == "два" and c == "три" or a == "1" and b == "2" and c == "3":
         print("ГОРИ")
     else:
         print("НЕ ГОРИ")
 
     # 4 задание
 
-    city1 = input("Введите город:")
-    city2 = input("Введите город:")
+    july_city = input("Введите город:")
+    august_city = input("Введите город:")
 
-    if city1 == "Тула" or city2 == "Пенза":
+    if (july_city == "Тула" and august_city != "Пенза" and july_city != august_city) or (july_city != "Тула" and august_city == "Пенза" and july_city != august_city):
         print("ДА")
     else:
         print("НЕТ")
 
     # 5 задание
 
-    n = int(input("Сколько нужно пробежать километров:"))
-    m = int(input("Сколько пробегает cпортсмен за день:"))
+    import math
 
-    if n and m != 0:
-        d = n // m
-        print("День:", d)
+    n = float(input("Введите количество километров:"))
+    m = float(input("Введите количество километров, которое спортсмен пробегает за день:"))
+
+    if m <= 0 or n <= 0:
+        print("Количество километров за день должно быть положительным числом.")
+    else:
+        days = math.ceil(n / m)
+        print("Спортсмен добежит до финиша на", days, "день.")
 
     # 6 задание
 
