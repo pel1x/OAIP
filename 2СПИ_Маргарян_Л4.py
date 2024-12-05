@@ -22,8 +22,11 @@ def main():
 
     # 3 задание
 
-    for i in range(int(input("Введите дату с которой начать поиск: ")), 32,
-                   int(input("Введите шаг: "))):
+    for i in range(
+        int(input("Введите дату с которой начать поиск: ")),
+        32,
+        int(input("Введите шаг: ")),
+    ):
         print(i, end=" ")
 
     # 4 задание
@@ -34,7 +37,7 @@ def main():
     count = 0
     max_count = 0
     print("Введите буквы: ")
-
+    
     for i in range(n):
         letters.append(input())
         if letters[i] == letter:
@@ -67,7 +70,7 @@ def main():
             if j in b:
                 count_glas += 1
         if count_glas > 1:
-            count_bez += (count_glas - 1)
+            count_bez += count_glas - 1
     print("Всего безударных", count_bez)
 
     # 7 задание
@@ -110,9 +113,9 @@ def main():
 
     # 10 задание
 
-    message = 'ППррииввеетт!!  ККаакк  ддееллаа??  ССееггоодднняя  ттааккааяя  ххоорроошшааяя  ппооггооддаа,,  ммоожжеетт  ппооггуулляяеемм??'
+    message = "ППррииввеетт!!  ККаакк  ддееллаа??  ССееггоодднняя  ттааккааяя  ххоорроошшааяя  ппооггооддаа,,  ммоожжеетт  ппооггуулляяеемм??"
     for i in range(0, len(message), 2):
-        print(message[i], end='')
+        print(message[i], end="")
 
 
 if __name__ == "__main__":
