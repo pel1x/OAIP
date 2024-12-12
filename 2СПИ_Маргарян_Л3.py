@@ -2,33 +2,35 @@ def main():
 
     # 1 задание
 
-    while True:
-        x = input("Введите строку:")
-        if x == "":
-            break
+    x = input("Введите строку:")
+    while x != "":
         print("Длина этой строки:", len(x))
+        x = input("Введите строку:")
 
     # 2 задание
 
     count = 0
-    while True:
-        x = float(input("Введите число:"))
-        if x > 36.6:
-            break
-        elif x <= 36.6:
+    x = float(input("Введите число:"))
+    while x < 36.6:
+        if x < 0:
             count += 1
-    print("Количество отрицательных чиел:", count)
+        x = float(input("Введите число:"))
+    print(count)
 
     # 3 задание
 
-    first_max = 0
-    second_max = 0
-    while True:
-        num = int(input("Введите число: "))
-        if abd(num) >= 1000:
-            break
-        if
-
+    m1 = -99999
+    m2 = -9999999
+    a = float(input())
+    while abs(a) < 1000:
+        if a > m1:
+            m2 = m1 
+            m1 = a
+        elif a > m2:
+            m2 = a
+        a = float(input())
+    print(int(m2))
+    
     # 4 задание
 
     num = input("Введите числа через пробел: ")
@@ -45,10 +47,8 @@ def main():
     # 5 задание
 
     num = float(input("Введите число: "))
-    while True:
-        if num == 0:
-            break
-        elif num % 3 == 0 and num % 7 == 0:
+    while num != 0:
+        if num % 3 == 0 and num % 7 == 0:
             print("Караул!")
             break
         elif num % 3 == 0 and num % 7 != 0:
