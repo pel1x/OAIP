@@ -48,10 +48,7 @@ def main():
 
     num = float(input("Введите число: "))
     while num != 0:
-        if num % 3 == 0 and num % 7 == 0:
-            print("Караул!")
-            break
-        elif num % 3 == 0 and num % 7 != 0:
+        if num % 3 == 0 and num % 7 != 0:
             print("Несчастливое")
         elif num % 7 == 0 and num % 3 != 0:
             print("Опасное")
@@ -106,16 +103,14 @@ def main():
     # 10 задание
 
     result = ""
-    while True:
-        word = input("Введите слово или !: ")
-        if word == "стоп":
-            break
+    word = input("Введите слово или !: ")
+    while word != "стоп":
         result += word + " "
         if word == "!":
             result = result[:-3] + "!"
             result += "\n"
+        word = input("Введите слово или !: ")
     print(result)
-
 
 if __name__ == "__main__":
     main()
