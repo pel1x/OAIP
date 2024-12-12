@@ -68,8 +68,6 @@ def main():
             break
     print(a)
 
-    # 7 задание
-
     # 8 задание
 
     word = [input("Введите слово: ")]
