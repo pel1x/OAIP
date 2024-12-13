@@ -29,14 +29,13 @@ def main():
 
     num = []
     res = []
-    while True:
-        num = int(input("Введите число: "))
-        if num == 0:
-            break
+    num = int(input("Введите число: "))
+    while num == 0:
         num.append(num)
     for i in num:
         if i % len(num) == 0:
             res.append(i)
+        num = int(input("Введите число: "))
     print(res)
 
     # 5 задание
@@ -56,10 +55,8 @@ def main():
     # 6 задание
 
     period = []
-    while True:
-        age = input("возраст находки: ")
-        if age == "":
-            break
+    age = input("возраст находки: ")
+    while age == "":
         if int(age) * 1000 in range(635000000, 2800000000):
             period.append("Proterozoic")
         elif int(age) * 1000 in range(300000000, 635000000):
@@ -70,6 +67,7 @@ def main():
             period.append("Cenozoic")
         else:
             period.append("Archaea")
+        age = input("возраст находки: ")
     print('\n'.join(period))
 
 if __name__ == "__main__":
