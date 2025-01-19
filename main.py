@@ -4,8 +4,8 @@ from template import template
 
 
 def main():
-    horse2("a3")
-    template(4, 4, 4)
+    horse2()
+    template()
 
 
 if __name__ == "__main__":

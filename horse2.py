@@ -1,5 +1,3 @@
-
-
 def horse2(position):
     moves = [
         (2, 1), (2, -1), (-2, 1), (-2, -1),
@@ -22,5 +20,4 @@ def horse2(position):
             new_position = 'abcdefgh'[new_stolb - 1] + str(new_ryd)
             possible_moves.append(new_position)
     
-    return possible_moves
-
+    print(possible_moves)
