@@ -6,7 +6,10 @@ def groundhog_day(strings):
         tekushchaya_string = strings[i]
         predydushchaya_string = strings[i - 1]
         
-        differing_indices = [j for j in range(len(tekushchaya_string)) if tekushchaya_string[j] != predydushchaya_string[j]]
+        differing_indices = []
+        for j in range(len(tekushchaya_string)):
+            if tekushchaya_string[j] != predydushchaya_string[j]:
+                differing_indices.append(j)
         
         if len(differing_indices) > 2:
             return (i, *differing_indices)
